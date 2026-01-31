@@ -383,12 +383,16 @@
       </div>
 
       <aside class="card pad rightHero">
-        <div class="imgBox" aria-label="Hero vizual (zamijeni slikom kad imaš)">
-          <!-- PROMIJENI putanju na svoju sliku kad želiš -->
-          <img src="img/hidroponika/home-grow-box.jpg" alt="Home Grow Box u modernom interijeru" onerror="this.style.display='none'; this.parentElement.style.minHeight='260px';" />
+        <div class="imgBox" id="heroSlider" aria-label="Hero slider">
+          <img id="heroSlide" src="img/hidroponika/home-grow-box.jpg" alt="SmartLabs — Home Grow Box / vertikalni vrt" />
           <div class="imgOverlay">
             <div>
-              <div class="cap">Home Grow Box</div>
+              <div class="cap">Home Grow Box / Vertikalni vrt</div>
+              <div class="subcap">premium mikro-sustavi za moderan dom</div>
+            </div>
+            <span class="tag">vizual</span>
+          </div>
+        </div>
               <div class="subcap">Mini sustav u stanu, premium dojam</div>
             </div>
             <span class="tag">demo vizual</span>
@@ -715,12 +719,16 @@
             </div>
           </div>
 
-          <div class="imgBox" aria-label="Tehnologija vizual (zamijeni slikom kad imaš)">
-            <!-- PROMIJENI na svoju sliku (npr. img/hidroponika/tech.jpg) -->
-            <img src="img/hidroponika/home-grow-box.jpg" alt="Detalj: uredna ugradnja i rasvjeta" onerror="this.style.display='none'; this.parentElement.style.minHeight='260px';" />
-            <div class="imgOverlay">
-              <div>
-                <div class="cap">Clean install</div>
+          <div class="imgBox" id="heroSlider" aria-label="Hero slider">
+          <img id="heroSlide" src="img/hidroponika/home-grow-box.jpg" alt="SmartLabs — Home Grow Box / vertikalni vrt" />
+          <div class="imgOverlay">
+            <div>
+              <div class="cap">Home Grow Box / Vertikalni vrt</div>
+              <div class="subcap">premium mikro-sustavi za moderan dom</div>
+            </div>
+            <span class="tag">vizual</span>
+          </div>
+        </div>
                 <div class="subcap">skriveni kabeli • uredni spojevi</div>
               </div>
               <span class="tag">premium look</span>
@@ -780,7 +788,25 @@
     </section>
 
     <!-- KONTAKT -->
-    <section class="section" id="kontakt">
+    
+    <!-- GALERIJA -->
+    <section class="section" id="ggGallery">
+      <div class="secTitle">
+        <div>
+          <h2>Galerija radova</h2>
+          <p>Stvarne slike iz projekta (zadnje dodane). Klikni za prikaz.</p>
+        </div>
+      </div>
+
+      <div class="card pad">
+        <div class="grid4" id="galleryGrid"></div>
+        <div class="mini" style="margin-top:10px;opacity:.8">
+          Ako online ne vidiš nove slike: otvori stranicu u browseru → Site settings → Storage → Clear (ili “Clear site data”).
+        </div>
+      </div>
+    </section>
+
+<section class="section" id="kontakt">
       <div class="secTitle">
         <div>
           <h2>Kontakt</h2>
@@ -896,6 +922,55 @@
       if(!el) return;
       el.addEventListener("input", updateWaLink);
     });
-  </script>
+  
+    // ✅ HERO slider + galerija iz GG_MEDIA (auto)
+    (function(){
+      if(!window.GG_MEDIA) return;
+      const B = window.GG_MEDIA.BUILD || Date.now();
+
+      // HERO
+      const slide = document.getElementById("heroSlide");
+      const hero = (window.GG_MEDIA.hero||[]).map(u => u + "?v=" + B);
+      if(slide && hero.length){
+        let i = 0;
+        slide.src = hero[0];
+        setInterval(()=> {
+          i = (i + 1) % hero.length;
+          slide.src = hero[i];
+        }, 3200);
+      }
+
+      // GALERIJA
+      const grid = document.getElementById("galleryGrid");
+      const gal = (window.GG_MEDIA.gallery||[]).map(u => u + "?v=" + B);
+      if(grid && gal.length){
+        grid.innerHTML = "";
+        gal.forEach((src)=>{
+          const a = document.createElement("a");
+          a.href = src;
+          a.target = "_blank";
+          a.rel = "noreferrer";
+          a.className = "card";
+          a.style.overflow = "hidden";
+          a.style.borderRadius = "18px";
+          a.style.border = "1px solid rgba(255,255,255,.12)";
+          a.style.background = "rgba(0,0,0,.18)";
+
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = "Galerija";
+          img.loading = "lazy";
+          img.style.width = "100%";
+          img.style.height = "220px";
+          img.style.objectFit = "cover";
+          img.style.display = "block";
+
+          a.appendChild(img);
+          grid.appendChild(a);
+        });
+      }
+    })();
+
+</script>
 </body>
 </html>
