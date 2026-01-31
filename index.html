@@ -314,6 +314,19 @@ html{scroll-behavior:smooth} body{-webkit-font-smoothing:antialiased;-moz-osx-fo
       .pill{font-size:13px}
     }
   </style>
+
+<style>
+.hero::after{
+  content:"";
+  position:absolute; inset:0;
+  background: radial-gradient(60% 60% at 25% 20%, rgba(0,0,0,.15), rgba(0,0,0,.55)),
+              linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.65));
+  z-index:1; pointer-events:none;
+}
+.hero-bg{z-index:0}
+.hero > *{z-index:2}
+</style>
+
 </head>
 
 <body>
