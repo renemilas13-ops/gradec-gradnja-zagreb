@@ -332,6 +332,39 @@
   </header>
 
   <main class="wrap">
+
+<!-- FORCE HERO (hero-01..03) -->
+<section class="section" id="forceHero" style="padding-top:26px">
+  <div class="card pad" style="display:grid;gap:16px;grid-template-columns:1.2fr .8fr;align-items:stretch">
+    <div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.12)">
+      <img id="forceHeroImg" src="./img/hero/hero-01.jpg" alt="SmartLabs — Hero" style="width:100%;height:420px;object-fit:cover;display:block">
+      <div style="position:absolute;inset:auto 0 0 0;padding:14px 16px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.72))">
+        <div style="font-weight:800;font-size:18px">SMART INTERIOR & MICRO SYSTEMS</div>
+        <div style="opacity:.85">Home Grow Box • vertikalni vrt • LED • ventilacija • automatika</div>
+      </div>
+    </div>
+    <div class="card pad" style="border:1px solid rgba(255,255,255,.12)">
+      <h2 style="margin:0 0 8px 0">Pošalji 3 informacije</h2>
+      <p style="margin:0 0 12px 0;opacity:.85">Lokacija + dimenzije + fotka mjesta. Odgovor brzo.</p>
+      <div style="display:grid;gap:10px">
+        <a class="btn primary" href="tel:+385957982203">📞 Nazovi</a>
+        <a class="btn" href="https://wa.me/385957982203" target="_blank" rel="noreferrer">💬 WhatsApp</a>
+      </div>
+      <div style="margin-top:12px;opacity:.7;font-size:13px">Hero koristi: <b>img/hero/hero-01..03.jpg</b></div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  const imgs = ["./img/hero/hero-01.jpg","./img/hero/hero-02.jpg","./img/hero/hero-03.jpg"];
+  const el = document.getElementById("forceHeroImg");
+  if(!el) return;
+  let i = 0;
+  setInterval(()=>{ i=(i+1)%imgs.length; el.src = imgs[i] + "?v=" + Date.now(); }, 2800);
+})();
+</script>
+
     <!-- HERO -->
     <section class="hero" id="top">
       <div class="card pad">
