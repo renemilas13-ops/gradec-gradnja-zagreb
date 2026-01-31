@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home Grow Box Zagreb — Smart interior mikro sustavi</title>
+  <meta name="description" content="Home Grow Box za stan: tiha ventilacija, LED rasvjeta, automatika i uredna ugradnja. Dizajn + izrada + montaža u Zagrebu." />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <script src="./assets/config.js"></script>
+
+  <style>
+    .hero-landing{position:relative;overflow:hidden;border-radius:24px}
+    .hero-landing .bg{position:absolute;inset:0;background:url('./img/hidroponika/home-grow-box.jpg') center/cover no-repeat;filter:saturate(1.05) contrast(1.05);transform:scale(1.03)}
+    .hero-landing .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.75))}
+    .hero-landing .in{position:relative;padding:42px;z-index:2}
+    .pill{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);font-size:13px}
+    .grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+    @media(max-width:900px){.grid2{grid-template-columns:1fr}.hero-landing .in{padding:24px}}
+    .check{margin:0;padding-left:18px}
+    .check li{margin:8px 0}
+    .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    @media(max-width:900px){.kpi{grid-template-columns:1fr}}
+    .kpi .card{padding:14px}
+    .form-mini input,.form-mini select,.form-mini textarea{width:100%;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.15);background:rgba(0,0,0,.22);color:inherit}
+    .form-mini label{display:block;font-size:13px;opacity:.8;margin:10px 0 6px}
+    .mut{opacity:.75}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Home Grow Box (ugradnja i izrada)",
+    "areaServed":{"@type":"City","name":"Zagreb"},
+    "provider":{"@type":"Organization","name":"Charlie&Bonnie & Co"},
+    "serviceType":"Dizajn, izrada i ugradnja Home Grow Box sustava u interijeru"
+  }
+  </script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container row between center">
+      <a class="brand" href="./index.html" style="text-decoration:none">
+        <strong>Charlie&Bonnie &amp; Co</strong>
+        <span class="mut" style="margin-left:10px">Smart interior & micro systems</span>
+      </a>
+      <nav class="nav">
+        <a href="./index.html">Početna</a>
+        <a href="./projekti.html">Galerija</a>
+        <a href="./kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="hero-landing card">
+          <div class="bg"></div><div class="ov"></div>
+          <div class="in">
+            <div class="pill">Zagreb • dizajn + izrada + ugradnja</div>
+            <h1 style="margin:14px 0 10px">Home Grow Box za stan</h1>
+            <p class="mut" style="max-width:720px;margin:0">
+              Diskretan “mini vrt” ili box u stanu: tiha ventilacija, LED rasvjeta, automatika i uredna ugradnja.
+              Idealno za začinsko bilje, salatu i jagode — bez nereda, bez improvizacije.
+            </p>
+
+            <div class="kpi">
+              <div class="card">
+                <strong>Tiho</strong><div class="mut">ventilacija + izolacija buke</div>
+              </div>
+              <div class="card">
+                <strong>Pametno</strong><div class="mut">timeri, senzori, automatika</div>
+              </div>
+              <div class="card">
+                <strong>Uredno</strong><div class="mut">zaštita prostora + čista primopredaja</div>
+              </div>
+            </div>
+
+            <div style="margin-top:18px" class="row gap">
+              <a class="btn primary" href="./kontakt.html">Traži ponudu</a>
+              <a class="btn" id="waQuick" href="#">WhatsApp upit</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="grid2">
+          <div class="card pad">
+            <h2>Što dobiješ</h2>
+            <ul class="check">
+              <li>Projekt “na mjeru” (niša/zid/ormar) + preporuka rasvjete</li>
+              <li>Knauf / obloge / završna obrada (gletanje, bojanje)</li>
+              <li>LED rasvjeta (spektri), napajanje, kabelska organizacija</li>
+              <li>Tiha ventilacija + filtracija + odvod kondenzata po potrebi</li>
+              <li>Automatika (timeri/senzori) i upute za korištenje</li>
+            </ul>
+
+            <h3 style="margin-top:18px">Tehnologije</h3>
+            <p class="mut">
+              Mikro-ventilacija, LED kontrola, pametni prekidači, senzori vlage/temperature, modularne police i
+              servisni pristup (da se sve može održavati bez rastavljanja stana).
+            </p>
+
+            <h3 style="margin-top:18px">Najčešća pitanja</h3>
+            <details class="card pad" style="margin-top:10px">
+              <summary><strong>Je li to legalno i sigurno u stanu?</strong></summary>
+              <p class="mut">Da — radimo za bilje/salatu/jagode uz sigurnu ventilaciju, uredno vođenje kablova i zaštitu prostora.</p>
+            </details>
+            <details class="card pad" style="margin-top:10px">
+              <summary><strong>Koliko traje ugradnja?</strong></summary>
+              <p class="mut">Ovisno o složenosti: 1–3 dana za jednostavnije izvedbe, 3–7 dana za ugradnju u nišu + završnu obradu.</p>
+            </details>
+            <details class="card pad" style="margin-top:10px">
+              <summary><strong>Kako do ponude?</strong></summary>
+              <p class="mut">Pošalji fotku zida/niše + okvirne mjere + što želiš uzgajati. Odgovaramo s prijedlogom i rasponom cijene.</p>
+            </details>
+          </div>
+
+          <div class="card pad">
+            <h2>Upit u 30 sekundi</h2>
+            <form class="form-mini" name="quick-homegrow" method="POST" data-netlify="true" action="./hvala.html">
+              <input type="hidden" name="form-name" value="quick-homegrow" />
+              <label>Lokacija</label>
+              <input name="lokacija" placeholder="npr. Zagreb – Trešnjevka" required />
+              <label>Dimenzije zida/niše</label>
+              <input name="mjere" placeholder="npr. 120×200 cm" required />
+              <label>Što želiš uzgajati?</label>
+              <select name="uzgoj" required>
+                <option value="">Odaberi…</option>
+                <option>Začinsko bilje</option>
+                <option>Salata</option>
+                <option>Jagode</option>
+                <option>Kombinacija</option>
+              </select>
+              <label>Telefon</label>
+              <input name="telefon" placeholder="npr. 095..." required />
+              <label>Poruka (opcionalno)</label>
+              <textarea name="poruka" rows="4" placeholder="Npr. želim tiho, ugradnja u nišu, LED kontrola..."></textarea>
+
+              <div style="margin-top:12px" class="row gap">
+                <button class="btn primary" type="submit">Pošalji</button>
+                <button class="btn" type="button" id="waBuild">WhatsApp poruka</button>
+              </div>
+              <p class="mut" style="margin-top:10px">Tip: dodaj fotke prostora u WhatsAppu za najbrži odgovor.</p>
+            </form>
+          </div>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <section class="card pad">
+          <h2>Želiš i “Smart interior” izvedbu?</h2>
+          <p class="mut">
+            Radimo komplet: knauf + LED, skrivena rasvjeta, tiha ventilacija, pametni prekidači i elegantna završna obrada.
+          </p>
+          <div class="row gap" style="margin-top:12px">
+            <a class="btn primary" href="./kontakt.html">Kontakt</a>
+            <a class="btn" href="./projekti.html">Galerija radova</a>
+          </div>
+        </section>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="mut">© Charlie&amp;Bonnie &amp; Co • Zagreb</div>
+    </div>
+  </footer>
+
+  <script>
+  // WhatsApp quick message
+  const phone = (window.GG_CONFIG && window.GG_CONFIG.WHATSAPP_NUMBER) ? window.GG_CONFIG.WHATSAPP_NUMBER : "385957982203";
+  function wa(msg){ window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, "_blank"); }
+
+  const waQuick = document.getElementById("waQuick");
+  if (waQuick) waQuick.onclick = (e)=>{ e.preventDefault(); wa("Pozdrav! Zanima me Home Grow Box u stanu. Lokacija: Zagreb. Mjere: __. Uzgajam: jagode/bilje. Molim prijedlog + cijenu."); };
+
+  const waBuild = document.getElementById("waBuild");
+  if (waBuild) waBuild.onclick = ()=> {
+    const f = document.querySelector("form[name='quick-homegrow']");
+    const msg =
+`Home Grow Box upit:
+Lokacija: ${f.lokacija.value}
+Mjere: ${f.mjere.value}
+Uzgajam: ${f.uzgoj.value}
+Telefon: ${f.telefon.value}
+Poruka: ${f.poruka.value || "-"}`;
+    wa(msg);
+  };
+  </script>
+</body>
+</html>
