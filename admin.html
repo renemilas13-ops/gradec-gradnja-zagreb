@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin | Gradec Gradnja</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="./index.html">
+          <div class="logo"><img src="./img/logo-mark.svg" alt="" width="28" height="28"/></div>
+          <div class="brand-title"><b>Gradec Gradnja</b><span>Admin</span></div>
+        </a>
+        <nav><ul>
+          <li><a href="./index.html">Početna</a></li>
+          <li><a href="./kontakt.html">Kontakt</a></li>
+        </ul></nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Mini statistika (lokalno)</h2>
+            <p>Ovo su klikovi i submiti spremljeni u tvom browseru (localStorage). Za prave brojke koristi GA4/Pixel.</p>
+          </div>
+        </div>
+        <div class="grid cols2">
+          <div class="card pad">
+            <h3>Eventi</h3>
+            <pre id="ggAdminStats" style="white-space:pre-wrap; word-break:break-word"></pre>
+          </div>
+          <div class="card pad">
+            <h3>Export</h3>
+            <p>Skini CSV i spremi.</p>
+            <button class="btn primary" id="ggExportCSV" type="button">⬇️ Export CSV</button>
+            <div style="margin-top:10px;opacity:.85">
+              <button class="btn" type="button" onclick="localStorage.removeItem('gg_stats_v1'); location.reload();">🧹 Reset stats</button>
+              <button class="btn" type="button" onclick="localStorage.removeItem('gg_consent_v1'); location.reload();">🍪 Reset consent</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/config.js"></script>
+  <script src="./assets/app.js"></script>
+</body>
+</html>

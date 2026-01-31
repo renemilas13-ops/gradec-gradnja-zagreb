@@ -1,0 +1,25 @@
+<svg width="220" height="64" viewBox="0 0 220 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gradec Gradnja logo">
+  <defs>
+    <linearGradient id="gg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA"/>
+      <stop offset="0.55" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#22C55E"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gg)" opacity="0.18"/>
+  <rect x="2" y="2" width="60" height="60" rx="18" stroke="rgba(255,255,255,.25)" stroke-width="2"/>
+
+  <!-- buildings icon -->
+  <path d="M16 52V26c0-1.2.7-2.2 1.8-2.6l10-4c1.8-.7 3.6.6 3.6 2.6V52" stroke="url(#gg)" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M38 52V18.5c0-1.5 1.2-2.7 2.7-2.7h8.6c1.5 0 2.7 1.2 2.7 2.7V52" stroke="url(#gg)" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M12 52h44" stroke="rgba(255,255,255,.25)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- windows -->
+  <path d="M21 30h5M21 36h5M21 42h5" stroke="rgba(255,255,255,.70)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M43 24h5M43 30h5M43 36h5M43 42h5" stroke="rgba(255,255,255,.70)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Wordmark -->
+  <text x="76" y="30" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="18" fill="rgba(255,255,255,.92)" font-weight="700">Gradec Gradnja</text>
+  <text x="76" y="50" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="12" fill="rgba(255,255,255,.62)">Unutarnji radovi • Keramika • Održavanje zgrada</text>
+</svg>

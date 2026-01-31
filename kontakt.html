@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt | Gradec Gradnja</title>
+  <meta name="description" content="Kontaktiraj Gradec Gradnju: unutarnji radovi, keramika i održavanje zgrada."/>
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <link rel="icon" href="./img/logo-mark.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Gradec Gradnja – Zagreb" />
+  <meta property="og:description" content="Unutarnji radovi, keramika i održavanje zgrada u Zagrebu. Ponuda 24–48h." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./img/hero/hero-01.jpg" />
+</head>
+<body>
+  <div class="blur-orb orb2"></div>
+  <div class="blur-orb orb3"></div>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="./index.html">
+          <div class="logo"><img src="./img/logo-mark.svg" alt="" width="28" height="28"/></div>
+          <div class="brand-title"><b>Gradec Gradnja</b><span>Kontakt</span></div>
+        </a>
+        <nav><ul>
+          <li><a href="./usluge.html">Usluge</a></li>
+          <li><a href="./projekti.html">Projekti</a></li>
+          <li><a href="./o-nama.html">O nama</a></li>
+          <li><a href="./odrzavanje.html">Održavanje</a></li>
+          <li><a href="./kontakt.html">Kontakt</a></li>
+        </ul></nav>
+        <div class="nav-cta">
+          <button class="btn ghost" id="themeBtn" type="button">☀️ Svijetlo</button>
+          <a class="btn" href="tel:+385957982203">📞 095 798 2203</a>
+          <button class="btn primary menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel" type="button">☰ Izbornik</button>
+        </div>
+      </div>
+      <div class="panel" id="mobilePanel">
+        <a href="./usluge.html">Usluge</a>
+        <a href="./projekti.html">Projekti</a>
+        <a href="./odrzavanje.html">Održavanje</a>
+        <a href="./kontakt.html">Kontakt</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container hero">
+      <div class="hero-grid">
+        <div class="hero-card hero-left reveal">
+          <div class="kicker"><span class="dot"></span> Brz odgovor • Jasna ponuda</div>
+          <h1>Kontaktiraj nas</h1>
+          <p class="lead">Najbrže ide kad pošalješ: opis + okvirnu kvadraturu + (ako imaš) 2–3 fotke stanja.</p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="tel:+385957982203">📞 095 798 2203</a>
+            <a class="btn" href="mailto:info@ggupravljanje.com?subject=Upit%20-%20Gradec%20Gradnja">✉️ info@ggupravljanje.com</a>
+          </div>
+
+          <div class="card pad" style="margin-top:14px">
+            <h3>Što radimo</h3>
+            <p>Unutarnji radovi • Keramika • Održavanje zgrada</p>
+            <div class="meta"><span class="tag">Zagreb</span><span class="tag">Okolica</span></div>
+          </div>
+        </div>
+
+        <div class="hero-card hero-right reveal">
+          <div class="hero-media">
+            <div class="card pad">
+              <h3>Pošalji upit</h3>
+              <form id="inquiryForm">
+                <div class="field">
+                  <label for="name">Ime i prezime</label>
+                  <input id="name" name="name" autocomplete="name" placeholder="npr. Ivan Horvat" required />
+                </div>
+                <div class="field">
+                  <label for="phone">Telefon</label>
+                  <input id="phone" name="phone" autocomplete="tel" placeholder="npr. 091 000 0000" required />
+                </div>
+                <div class="field">
+                  <label for="service">Usluga</label>
+                  <input id="service" name="service" placeholder="npr. keramika / adaptacija / održavanje" required />
+                </div>
+                <div class="field">
+                  <label for="location">Lokacija</label>
+                  <input id="location" name="location" placeholder="npr. Zagreb - Trešnjevka" />
+                </div>
+                <div class="field" style="grid-column: 1 / -1;">
+                  <label for="message">Opis radova</label>
+                  <textarea id="message" name="message" placeholder="Kratko opiši što treba (dimenzije, stanje, rok...)"></textarea>
+                </div>
+                <div class="form-actions">
+                  <button class="btn primary" type="submit">🚀 Pošalji email</button>
+                  <a class="btn" href="tel:+385957982203">⚡ Radije nazovi</a>
+                  <div class="hint">Forma otvara tvoj email klijent (bez servera). Za pravi web obrazac kasnije dodamo backend ili servis.</div>
+                </div>
+              </form>
+            </div>
+
+            <div class="card" style="overflow:hidden">
+              <div class="media"><img src="./img/ekipa.jpg" alt="Fiktivna ekipa – demo"/></div>
+              <div class="card pad">
+                <h3>Impresivan dojam</h3>
+                <p>Ovo je dizajn “premium” stila. Kad dodaš prave fotke, izgleda još jače.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© <span id="year"></span> Gradec Gradnja</div>
+      <div>📞 <a href="tel:+385957982203">095 798 2203</a> • ✉️ <a href="mailto:info@ggupravljanje.com">info@ggupravljanje.com</a></div>
+    </div>
+  </footer>
+
+  <script src="./assets/config.js"></script>
+  <script src="./assets/app.js"></script>
+</body>
+</html>

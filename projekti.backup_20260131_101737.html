@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projekti | Gradec Gradnja</title>
+  <meta name="description" content="Galerija radova: adaptacije, keramika, održavanje zgrada (fiktivni prikazi za demo)."/>
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <link rel="icon" href="./img/logo-mark.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Gradec Gradnja – Zagreb" />
+  <meta property="og:description" content="Unutarnji radovi, keramika i održavanje zgrada u Zagrebu. Ponuda 24–48h." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./img/hero/hero-01.jpg" />
+</head>
+<body>
+  <div class="blur-orb orb1"></div>
+  <div class="blur-orb orb2"></div>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="./index.html">
+          <div class="logo"><img src="./img/logo-mark.svg" alt="" width="28" height="28"/></div>
+          <div class="brand-title"><b>Gradec Gradnja</b><span>Projekti</span></div>
+        </a>
+        <nav><ul>
+          <li><a href="./usluge.html">Usluge</a></li>
+          <li><a href="./projekti.html">Projekti</a></li>
+          <li><a href="./o-nama.html">O nama</a></li>
+          <li><a href="./odrzavanje.html">Održavanje</a></li>
+          <li><a href="./kontakt.html">Kontakt</a></li>
+        </ul></nav>
+        <div class="nav-cta">
+          <button class="btn ghost" id="themeBtn" type="button">☀️ Svijetlo</button>
+          <a class="btn" href="tel:+385957982203">📞 095 798 2203</a>
+          <button class="btn primary menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel" type="button">☰ Izbornik</button>
+        </div>
+      </div>
+      <div class="panel" id="mobilePanel">
+        <a href="./usluge.html">Usluge</a>
+        <a href="./projekti.html">Projekti</a>
+        <a href="./odrzavanje.html">Održavanje</a>
+        <a href="./kontakt.html">Kontakt</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container hero">
+      <div class="hero-card hero-left reveal" style="padding:22px">
+        <div class="kicker"><span class="dot"></span> Galerija (demo)</div>
+        <h1>Primjeri završnog standarda.</h1>
+        <p class="lead">Ovo su fiktivne “foto” scene (SVG) za demo. Kad imaš prave fotke, zamijeni datoteke u mapi <b>/img</b>.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="grid cols3">
+          <article class="card project reveal">
+            <div class="media">
+              <img src="./img/adaptacija.jpg" alt="Adaptacija interijera – demo"/>
+            </div>
+            <div class="body">
+              <h3>Adaptacija interijera</h3>
+              <p>Gletanje, bojanje, završni detalji — uredno i precizno.</p>
+              <div class="meta">
+                <button class="btn" type="button" data-modal-src="./img/adaptacija.jpg" data-modal-title="Adaptacija interijera">🔍 Pogledaj</button>
+                <span class="tag">Unutarnji radovi</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <div class="media">
+              <img src="./img/keramika.jpg" alt="Keramika – demo"/>
+            </div>
+            <div class="body">
+              <h3>Keramika / kupaonica</h3>
+              <p>Hidroizolacija, ravnine, fuge, detalji.</p>
+              <div class="meta">
+                <button class="btn" type="button" data-modal-src="./img/keramika.jpg" data-modal-title="Keramika / kupaonica">🔍 Pogledaj</button>
+                <span class="tag">Keramika</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <div class="media">
+              <img src="./img/odrzavanje.jpg" alt="Održavanje zgrade – demo"/>
+            </div>
+            <div class="body">
+              <h3>Održavanje zgrade</h3>
+              <p>Sanacije i intervencije za zajedničke prostore.</p>
+              <div class="meta">
+                <button class="btn" type="button" data-modal-src="./img/odrzavanje.jpg" data-modal-title="Održavanje zgrade">🔍 Pogledaj</button>
+                <span class="tag">Održavanje</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <div class="media">
+              <img src="./img/ekipa.jpg" alt="Ekipa na gradilištu – demo"/>
+            </div>
+            <div class="body">
+              <h3>Ekipa i organizacija</h3>
+              <p>Brza organizacija i jasna komunikacija kroz radove.</p>
+              <div class="meta">
+                <button class="btn" type="button" data-modal-src="./img/ekipa.jpg" data-modal-title="Ekipa i organizacija">🔍 Pogledaj</button>
+                <span class="tag">Organizacija</span>
+              </div>
+            </div>
+          </article>
+
+          <div class="card pad reveal">
+            <h3>Kako zamijeniti demo fotke</h3>
+            <p>Ubaci svoje slike u <b>/img</b> i preimenuj ih u <b>g1-interijer.jpg</b> itd. Pa u HTML promijeni .svg u .jpg.</p>
+            <div class="meta"><span class="tag">Jednostavno</span><span class="tag">Brzo</span></div>
+          </div>
+
+          <div class="card pad reveal">
+            <h3>Želiš “prave” AI fotke?</h3>
+            <p>Mogu ti složiti set promptova za 20 fotki (interijeri, keramika, održavanje, ekipa) za bilo koji generator.</p>
+            <div class="meta"><span class="tag">Prompts</span><span class="tag">Brand look</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="aiGalerija">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Galerija radova</h2>
+          <p>Fotorealistične (AI) slike — fiktivne scene za prezentaciju usluga: adaptacije, keramika, suhomontaža i održavanje zgrada.</p>
+        </div>
+      </div>
+
+      <div class="grid cols3">
+        <div class="card pad reveal"><div class="media"><img src="./img/ai/ai-06-poslije.jpg" alt="Kupaonica nakon radova" loading="lazy"/></div><div class="meta"><span class="tag">After</span><span class="tag">Keramika</span></div></div>
+        <div class="card pad reveal"><div class="media"><img src="./img/ai/ai-08-kuhinja-poslije.jpg" alt="Kuhinja nakon adaptacije" loading="lazy"/></div><div class="meta"><span class="tag">After</span><span class="tag">Adaptacija</span></div></div>
+        <div class="card pad reveal"><div class="media"><img src="./img/ai/ai-10-krecenje.jpg" alt="Krečenje i zaštita prostora" loading="lazy"/></div><div class="meta"><span class="tag">Krečenje</span><span class="tag">Urednost</span></div></div>
+        <div class="card pad reveal"><div class="media"><img src="./img/ai/ai-11-knauf-strop.jpg" alt="Suhomontaža stropa" loading="lazy"/></div><div class="meta"><span class="tag">Knauf</span><span class="tag">Strop</span></div></div>
+        <div class="card pad reveal"><div class="media"><img src="./img/ai/ai-13-keramika-pod.jpg" alt="Polaganje pločica" loading="lazy"/></div><div class="meta"><span class="tag">Keramika</span><span class="tag">Pod</span></div></div>
+        <div class="card pad reveal"><div class="media"><img src="./img/ai/ai-18-rasvjeta.jpg" alt="Održavanje rasvjete" loading="lazy"/></div><div class="meta"><span class="tag">Održavanje</span><span class="tag">Intervencija</span></div></div>
+      </div>
+
+      <div style="margin-top:12px" class="cta reveal">
+        <div class="left">
+          <h3>Najbrža ponuda</h3>
+          <p>Pošalji fotke + lokaciju + kvadraturu na WhatsApp.</p>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end">
+          <a class="btn" href="tel:+385957982203">📞 095 798 2203</a>
+          <a class="btn primary" target="_blank" rel="noopener" href="https://wa.me/385957982203?text=Pozdrav!%20Saljem%20fotke%20%2B%20lokaciju%20%2B%20kvadraturu.%20Trebam%20ponudu.">💬 Pošalji fotke</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© <span id="year"></span> Gradec Gradnja</div>
+      <div>📞 <a href="tel:+385957982203">095 798 2203</a> • ✉️ <a href="mailto:info@ggupravljanje.com">info@ggupravljanje.com</a></div>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-top">
+        <b id="modalTitle">Pregled</b>
+        <button class="btn modal-close" id="modalClose" type="button">✕</button>
+      </div>
+      <div class="modal-body">
+        <iframe id="modalFrame" title="Galerija" style="width:100%; height:560px; border:0; border-radius:16px; background:transparent"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/config.js"></script>
+  <script src="./assets/app.js"></script>
+</body>
+</html>

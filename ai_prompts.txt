@@ -1,0 +1,97 @@
+AI PHOTO PACK — Gradec Gradnja (fiktivno ali realno)
+Stil (ZA SVE):
+Photorealistic DSLR, natural light, clean construction aesthetic, neutral colors, high detail, no logos, no text, no brands, no license plates.
+People allowed but: faces not identifiable (turned away / helmet / blur).
+Location vibe: Zagreb, Croatia (no readable signs).
+
+=====================================
+4 HERO (koristi na početnoj / header)
+=====================================
+
+1) Filename: ai-01-hero-interijer.jpg
+Prompt:
+Photorealistic interior renovation scene in a modern Zagreb apartment (fictional), clean protected floors with foil and tape, tidy tools, warm natural daylight, worker in helmet in the background with face not identifiable, DSLR 35mm, high detail, realistic textures, no logos, no text.
+
+2) Filename: ai-02-hero-keramika.jpg
+Prompt:
+Photorealistic bathroom tiling close-up (fictional), perfectly aligned large-format tiles, spacers and leveling system visible, neat tools, soft window light, DSLR 50mm, shallow depth of field, ultra-realistic, no branding, no text.
+
+3) Filename: ai-03-hero-odrzavanje.jpg
+Prompt:
+Photorealistic building maintenance scene in a clean stairwell (fictional Zagreb building), worker repairing hallway lighting/electrical panel, safety gloves, organized equipment, calm professional vibe, no readable labels, no logos, DSLR 35mm.
+
+4) Filename: ai-04-hero-ekipa.jpg
+Prompt:
+Photorealistic construction team portrait on site (fictional), 4–5 workers with helmets and vests, faces not identifiable (looking away), confident posture, clean background, DSLR 35mm, natural light, no logos, no text.
+
+=====================================
+12 PROJEKTI / GALERIJA
+=====================================
+
+5) Filename: ai-05-prije.jpg
+Prompt:
+Photorealistic small bathroom before renovation (fictional), older tiles, worn but realistic, natural dim light, no extreme mess, DSLR, neutral colors, no text.
+
+6) Filename: ai-06-poslije.jpg
+Prompt:
+Photorealistic same bathroom after renovation (fictional), modern tiles, clean grout lines, tidy finish, bright natural light, DSLR, high detail, no logos.
+
+7) Filename: ai-07-kuhinja-prije.jpg
+Prompt:
+Photorealistic kitchen area before renovation (fictional), unfinished walls, realistic wear, protected floor, neutral tones, DSLR, no text.
+
+8) Filename: ai-08-kuhinja-poslije.jpg
+Prompt:
+Photorealistic kitchen area after renovation (fictional), smooth painted walls, crisp edges, clean finishes, warm daylight, DSLR, no logos.
+
+9) Filename: ai-09-gletanje.jpg
+Prompt:
+Photorealistic wall plastering / skim coat application (fictional), worker hands with trowel, smooth compound, protective foil, clean worksite, DSLR 50mm, no branding.
+
+10) Filename: ai-10-krecenje.jpg
+Prompt:
+Photorealistic painting scene (fictional), roller on wall, masking tape on edges, clean lines, drop cloth, daylight, DSLR 35mm, no logos.
+
+11) Filename: ai-11-knauf-strop.jpg
+Prompt:
+Photorealistic drywall ceiling installation (fictional), metal profiles, neat screws, tidy tools, clean scene, DSLR, no text.
+
+12) Filename: ai-12-knauf-pregrada.jpg
+Prompt:
+Photorealistic drywall partition install (fictional), studs + boards, clean cut edges, tidy site, DSLR, no logos.
+
+13) Filename: ai-13-keramika-pod.jpg
+Prompt:
+Photorealistic floor tiling (fictional), large-format tiles, leveling clips, precision layout, close-up, DSLR 50mm, no branding.
+
+14) Filename: ai-14-fuge.jpg
+Prompt:
+Photorealistic grout work (fictional), sponge cleaning grout haze, perfect joints, close-up realism, DSLR 50mm, no logos.
+
+15) Filename: ai-15-parket.jpg
+Prompt:
+Photorealistic parquet/laminate installation (fictional), underlay visible, clean hands/tools, tidy, daylight, DSLR, no text.
+
+16) Filename: ai-16-stubiste.jpg
+Prompt:
+Photorealistic stairwell repair/painting (fictional), masked edges, smooth finish, clean hallway, daylight, DSLR 35mm, no branding.
+
+=====================================
+4 ODRŽAVANJE ZGRADA
+=====================================
+
+17) Filename: ai-17-odvod.jpg
+Prompt:
+Photorealistic maintenance worker checking drain/pipe (fictional), gloves, clean tools, tidy environment, DSLR, no labels.
+
+18) Filename: ai-18-rasvjeta.jpg
+Prompt:
+Photorealistic replacing hallway light fixture (fictional), safe ladder setup, clean stairwell, daylight, DSLR, no logos.
+
+19) Filename: ai-19-vrata.jpg
+Prompt:
+Photorealistic entrance door hinge/closer adjustment (fictional), close-up hands/tools, neat finish, DSLR 50mm, no branding.
+
+20) Filename: ai-20-hitna-intervencija.jpg
+Prompt:
+Photorealistic calm emergency repair vibe (fictional), worker with tool bag, clean scene, professional look, no drama, DSLR, no text.
