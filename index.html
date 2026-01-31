@@ -3,336 +3,899 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BuildLabs Group – Gradnja, interijeri i pametni sustavi | Zagreb</title>
-  <meta name="description" content="BuildLabs Group – adaptacije, interijeri, keramika, suhomontaža i pametni AI sustavi. Zagreb i okolica.">
-  <meta name="theme-color" content="#0b1220" />
-  <link rel="manifest" href="./manifest.webmanifest" />
-  <link rel="stylesheet" href="./assets/style.css" />
-  <link rel="icon" href="./img/logo-mark.svg" type="image/svg+xml" />
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"BuildLabs Group",
-    "description":"Unutarnji radovi, keramika, adaptacije i održavanje zgrada u Zagrebu.",
-    "areaServed":"Zagreb",
-    "telephone":"+385957982203",
-    "email":"info@ggupravljanje.com"
-  }
-  </script>
+  <meta name="description" content="SmartLabs Interior — pametni vertikalni vrtovi i Home Grow Box sustavi za moderan dom. Dizajn, izrada i ugradnja: knauf + LED, tiha ventilacija, automatika." />
+  <title>SmartLabs Interior — Home Grow Box & Vertikalni vrtovi</title>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "BuildLabs Group",
-  "telephone": "+385957982203",
-  "email": "r.m.charlie@proton.me",
-  "areaServed": "Zagreb",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "6"
-  },
-  "review": [
-    {"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5"},"author":{"@type":"Person","name":"Klijent"},"reviewBody":"Keramika uredno i precizno, rok ispoštovan."},
-    {"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5"},"author":{"@type":"Person","name":"Klijent"},"reviewBody":"Adaptacija stana bez stresa, odlični detalji."},
-    {"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5"},"author":{"@type":"Person","name":"Klijent"},"reviewBody":"Održavanje zgrade: brza intervencija i komunikacija."}
-  ]
-}
-</script>
+  <style>
+    :root{
+      --bg:#060912;
+      --bg2:#0a1030;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.09);
+      --stroke: rgba(255,255,255,.12);
+      --text:#e9eeff;
+      --muted: rgba(233,238,255,.72);
+      --muted2: rgba(233,238,255,.52);
+      --accent:#7c5cff;
+      --accent2:#29d3a2;
+      --warn:#ffcc66;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --r: 22px;
+      --r2: 16px;
+      --max: 1100px;
+      --pad: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1000px 500px at 20% 10%, rgba(124,92,255,.22), transparent 60%),
+        radial-gradient(900px 500px at 80% 0%, rgba(41,211,162,.16), transparent 55%),
+        radial-gradient(900px 700px at 30% 80%, rgba(124,92,255,.14), transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      overflow-x:hidden;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding: 26px 16px 46px;}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(180deg, rgba(6,9,18,.78), rgba(6,9,18,.35));
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .navin{max-width:var(--max); margin:0 auto; padding: 12px 16px; display:flex; align-items:center; justify-content:space-between; gap:14px;}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
+    .logo{
+      width:34px; height:34px; border-radius:12px;
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255,255,255,.35), transparent 45%),
+        linear-gradient(135deg, rgba(124,92,255,1), rgba(41,211,162,1));
+      box-shadow: 0 10px 30px rgba(124,92,255,.22);
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .brand small{display:block; font-weight:700; color:var(--muted2); letter-spacing:.3px}
+    .links{display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .pill{
+      padding:8px 12px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color:var(--muted);
+      font-weight:650; font-size:14px;
+      transition: transform .12s ease, background .12s ease;
+      user-select:none;
+    }
+    .pill:hover{transform: translateY(-1px); background: rgba(255,255,255,.08)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 14px; border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:800;
+      box-shadow: 0 10px 26px rgba(0,0,0,.25);
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      cursor:pointer;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.18)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(124,92,255,1), rgba(41,211,162,1));
+      border-color: rgba(255,255,255,.18);
+      box-shadow: 0 18px 50px rgba(124,92,255,.26);
+    }
+    .btn.primary:hover{transform: translateY(-1px); filter: brightness(1.02)}
+    .btn.small{padding:10px 12px; border-radius:12px; font-size:14px}
+    .hero{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.12);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .pad{padding: 22px}
+    h1{margin:0 0 10px; font-size:44px; line-height:1.05; letter-spacing:-.5px}
+    p{margin:0; color:var(--muted); line-height:1.55}
+    .sub{margin-top:10px; font-size:16px; color:var(--muted)}
+    .heroActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px}
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.13);
+      background: rgba(255,255,255,.05);
+      color: rgba(233,238,255,.78);
+      font-weight:700; font-size:13px;
+    }
+    .chip b{color:rgba(255,255,255,.92); font-weight:900}
+    .rightHero{
+      display:flex; flex-direction:column; gap:12px;
+      background:
+        radial-gradient(600px 200px at 30% 20%, rgba(41,211,162,.22), transparent 65%),
+        radial-gradient(600px 240px at 70% 60%, rgba(124,92,255,.18), transparent 62%),
+        linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+    }
+    .statGrid{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px}
+    .stat{
+      padding:12px; border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+    }
+    .stat .k{color:rgba(233,238,255,.68); font-weight:800; font-size:12px; text-transform:uppercase; letter-spacing:.6px}
+    .stat .v{margin-top:6px; font-weight:950; font-size:18px}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      color: rgba(233,238,255,.82);
+      font-weight:800; font-size:13px;
+    }
+    .badge .dot{width:8px;height:8px;border-radius:999px;background:var(--accent2); box-shadow:0 0 0 4px rgba(41,211,162,.14)}
+    .section{margin-top:16px}
+    .secTitle{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; margin:22px 0 12px}
+    .secTitle h2{margin:0; font-size:24px; letter-spacing:-.2px}
+    .secTitle p{max-width:58ch; margin:0; color:var(--muted2)}
+    .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+    .grid2{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+    .grid4{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+    .service h3{margin:0 0 6px; font-size:18px}
+    .service p{margin:0; color:var(--muted)}
+    .icon{
+      width:44px;height:44px;border-radius:16px;
+      display:grid; place-items:center;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      margin-bottom:12px;
+    }
+    .icon svg{opacity:.92}
+    .list{margin:10px 0 0; padding:0; list-style:none; display:grid; gap:8px}
+    .li{
+      display:flex; gap:10px; align-items:flex-start;
+      color:var(--muted);
+      padding:10px 12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+    .tick{
+      width:18px;height:18px;border-radius:6px;
+      background: rgba(41,211,162,.14);
+      border:1px solid rgba(41,211,162,.25);
+      display:grid; place-items:center;
+      margin-top:1px;
+      flex:0 0 auto;
+    }
+    .tick svg{width:12px;height:12px}
+    .callout{
+      padding:16px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(124,92,255,.12), rgba(255,255,255,.04));
+    }
+    .callout b{color:rgba(255,255,255,.92)}
+    .steps{display:grid; gap:10px; margin-top:10px}
+    .step{
+      padding:14px; border-radius:18px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+      display:flex; gap:12px; align-items:flex-start;
+    }
+    .num{
+      width:28px;height:28px;border-radius:12px;
+      display:grid; place-items:center;
+      font-weight:950;
+      background: rgba(124,92,255,.18);
+      border:1px solid rgba(124,92,255,.30);
+      flex:0 0 auto;
+    }
+    .step h4{margin:0 0 4px; font-size:16px}
+    .step p{margin:0; color:var(--muted)}
+    .showcase{
+      padding:16px; border-radius:18px;
+      border:1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(41,211,162,.10), rgba(255,255,255,.04));
+    }
+    .showcase h3{margin:0 0 6px}
+    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .tag{
+      font-size:12px; font-weight:850;
+      color: rgba(233,238,255,.80);
+      padding:7px 10px; border-radius:999px;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .imgBox{
+      position:relative;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.22);
+      min-height: 250px;
+    }
+    .imgBox img{
+      width:100%; height:100%; object-fit:cover; display:block;
+      filter: saturate(1.05) contrast(1.03);
+      transform: scale(1.01);
+    }
+    .imgOverlay{
+      position:absolute; inset:auto 0 0 0;
+      padding:12px;
+      background: linear-gradient(180deg, transparent, rgba(0,0,0,.72));
+      display:flex; align-items:flex-end; justify-content:space-between; gap:10px;
+    }
+    .imgOverlay .cap{font-weight:950}
+    .imgOverlay .subcap{color:rgba(233,238,255,.72); font-weight:750; font-size:13px}
+    .footer{
+      margin-top:20px;
+      display:flex; flex-wrap:wrap;
+      align-items:center; justify-content:space-between; gap:10px;
+      color: rgba(233,238,255,.55);
+      font-weight:650;
+    }
+    .mini{
+      font-size:12px;
+      color: rgba(233,238,255,.55);
+      line-height:1.4;
+    }
+    .form{
+      display:grid; gap:10px;
+    }
+    .field{
+      display:grid; gap:6px;
+    }
+    .field label{
+      font-weight:850;
+      font-size:13px;
+      color: rgba(233,238,255,.72);
+    }
+    .field input, .field textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.20);
+      color: var(--text);
+      outline:none;
+    }
+    .field textarea{min-height:110px; resize:vertical}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+    .hint{color: rgba(233,238,255,.58); font-size:13px}
+    .topline{
+      display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;
+    }
+    .topline .ctaLine{display:flex; gap:10px; flex-wrap:wrap}
+    .notice{
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      color: rgba(233,238,255,.72);
+      font-weight:750;
+    }
+    .notice b{color: rgba(255,255,255,.92)}
+    .kbd{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size:12px;
+      padding:2px 6px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.22);
+      color: rgba(233,238,255,.75);
+    }
 
-  <meta property="og:title" content="BuildLabs Group – Zagreb" />
-  <meta property="og:description" content="Unutarnji radovi, keramika i održavanje zgrada u Zagrebu. Ponuda 24–48h." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="./img/hero/hero-01.jpg" />
+    /* responsive */
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr; }
+      h1{font-size:38px}
+      .grid3{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .grid4{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 520px){
+      h1{font-size:34px}
+      .row{grid-template-columns:1fr}
+      .grid4{grid-template-columns:1fr}
+      .links{gap:8px}
+      .pill{font-size:13px}
+    }
+  </style>
 </head>
 
 <body>
-  <div class="blur-orb orb1"></div>
-  <div class="blur-orb orb2"></div>
-  <div class="blur-orb orb3"></div>
 
-  <header>
-    <div class="container">
-      <div class="nav">
-        <a class="brand" href="./index.html" aria-label="Početna">
-          <div class="logo" aria-hidden="true">
-            <img src="./img/logo-mark.svg" alt="" width="28" height="28"/>
-          </div>
-          <div class="brand-title">
-            <b>BuildLabs Group</b>
-            <span>Unutarnji radovi • Keramika • Održavanje zgrada</span>
-          </div>
-        </a>
-
-        <nav aria-label="Glavni izbornik">
-          <ul>
-            <li><a href="./usluge.html">Usluge</a></li>
-            <li><a href="./projekti.html">Projekti</a></li>
-          <li><a href="./o-nama.html">O nama</a></li>
-            <li><a href="./recenzije.html">Recenzije</a></li>
-          <li><a href="./o-nama.html">O nama</a></li>
-            <li><a href="./odrzavanje.html">Održavanje</a></li>
-            <li><a href="./kontakt.html">Kontakt</a></li>
-          </ul>
-        </nav>
-
-        <div class="nav-cta">
-          <button class="btn ghost" id="themeBtn" type="button" title="Promijeni temu">☀️ Svijetlo</button>
-          <a class="btn" href="tel:+385957982203" title="Nazovi odmah"><span class="icon">📞</span> 095 798 2203</a>
-          <button class="btn primary menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel" type="button">
-            <span class="icon">☰</span> Izbornik
-          </button>
-          <a class="btn primary" href="./kontakt.html" title="Zatraži ponudu"><span class="icon">🧾</span> Zatraži ponudu</a>
+  <header class="nav">
+    <div class="navin">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          SmartLabs Interior
+          <small>Smart Interior & Micro Systems</small>
         </div>
       </div>
 
-      <div class="panel" id="mobilePanel" aria-label="Mobilni izbornik">
-        <a href="./usluge.html">Usluge</a>
-        <a href="./projekti.html">Projekti</a>
-        <a href="./odrzavanje.html">Održavanje</a>
-        <a href="./kontakt.html">Kontakt</a>
-      </div>
+      <nav class="links" aria-label="Glavni izbornik">
+        <a class="pill" href="#usluge">Usluge</a>
+        <a class="pill" href="#proces">Proces</a>
+        <a class="pill" href="#tehnologija">Tehnologija</a>
+        <a class="pill" href="#primjeri">Primjeri</a>
+        <a class="pill" href="#kontakt">Kontakt</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <div class="container hero">
-      <div class="hero-grid">
-        <div class="hero-card hero-left reveal">
-          <div class="kicker"><span class="dot"></span> Zagreb i okolica • Precizno • Uredno • Rokovi po dogovoru</div>
-          <h1>Premium završna obrada interijera + pouzdano održavanje zgrada.</h1>
-          <p class="lead">
-            Radimo adaptacije, keramiku i unutarnje radove — plus održavanje zgrada kroz redovne i hitne intervencije.
-            Cilj: <b>kvaliteta koja se vidi</b> i izvođenje koje te ne opterećuje.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn primary" href="tel:+385957982203"><span class="icon">⚡</span> Nazovi odmah</a>
-
-<section class="section reveal" id="hidroponika">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <h2>Hidroponski AI sustavi</h2>
-        <p>
-          Dizajniramo i ugrađujemo moderne hidroponske sustave za stanove, urede i male komercijalne prostore —
-          čisto, tiho i estetski, uz opciju pametnog nadzora i automatizacije.
-        </p>
-      </div>
-    </div>
-
-    <div class="grid cols2">
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero" id="top">
       <div class="card pad">
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
-          <span class="pill">IoT senzori</span>
-          <span class="pill">Automatizacija</span>
-          <span class="pill">LED spektri</span>
-          <span class="pill">Upozorenja</span>
-          <span class="pill">Servis</span>
+        <div class="topline">
+          <span class="badge"><span class="dot"></span> Novi premium segment: mikro-sustavi za moderan dom</span>
+          <span class="notice">Bez “industrijskog” izgleda. <b>Čisto. Tiho. Estetski.</b></span>
         </div>
 
-        <h3>Home Grow Box (zidni mini-vrt)</h3>
-        <p style="opacity:.92">
-          Kompaktan “mini vrt” na zidu — idealan za <b>začinsko bilje</b>, <b>salate</b> i <b>jagode</b>.
-          Sustav je modularan: može krenuti mali, pa se kasnije proširiti.
+        <h1>Pametni vertikalni vrtovi i <span style="color:rgba(255,255,255,.95)">Home Grow Box</span> sustavi za interijer</h1>
+        <p class="sub">
+          Dizajniramo i ugrađujemo kompaktne, tihe i impresivne mikro-sustave za uzgoj biljaka u stanu/kući — uz
+          planiranje, automatiku i integraciju u interijer (knauf + LED, ventilacija, pametni prekidači).
         </p>
 
-        <div class="grid cols2" style="gap:10px;margin-top:14px">
-          <div class="card" style="padding:12px">
-            <div style="font-weight:800">Ponuda u 24–48h</div>
-            <div style="opacity:.85">Fotka zida + dimenzije = brz izračun.</div>
-          </div>
-          <div class="card" style="padding:12px">
-            <div style="font-weight:800">Uredna montaža</div>
-            <div style="opacity:.85">Zaštita prostora + čisto nakon radova.</div>
-          </div>
+        <div class="heroActions">
+          <a class="btn primary" href="#kontakt">Zatraži besplatni koncept</a>
+          <a class="btn" href="#primjeri">Pogledaj primjere</a>
+          <a class="btn small" href="#tehnologija">Što je “AI” kod nas?</a>
+        </div>
+
+        <div class="chips" aria-label="Istaknute stavke">
+          <span class="chip"><b>LED</b> full-spectrum</span>
+          <span class="chip"><b>Tiha</b> ventilacija</span>
+          <span class="chip"><b>Auto</b> navodnjavanje</span>
+          <span class="chip"><b>Smart</b> rasvjeta + knauf</span>
+          <span class="chip"><b>Modularno</b> — nadogradivo</span>
         </div>
 
         <ul class="list" style="margin-top:14px">
-          <li>✔ Ugradnja, montaža i podešavanje “ključ u ruke”</li>
-          <li>✔ Integrirana LED rasvjeta + timer (dan/noć ciklus)</li>
-          <li>✔ Automatizirano zalijevanje + spremnik (minimalna briga)</li>
-          <li>✔ Opcija: senzori za temperaturu/vlagu i nadzor parametara</li>
-          <li>✔ Održavanje: čišćenje, servis, zamjena potrošnog (po dogovoru)</li>
+          <li class="li">
+            <span class="tick" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div><b style="color:rgba(255,255,255,.9)">Jedan izvođač, cijeli sustav:</b> dizajn → izrada → ugradnja → fina završna obrada.</div>
+          </li>
+          <li class="li">
+            <span class="tick" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div><b style="color:rgba(255,255,255,.9)">Diskretno i tiho:</b> fokus na estetiku i komfor (bez buke, bez nereda).</div>
+          </li>
+          <li class="li">
+            <span class="tick" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div><b style="color:rgba(255,255,255,.9)">Pametna automatika:</b> svjetlo, voda i raspored — jednostavno, bez komplikacija.</div>
+          </li>
         </ul>
-
-        <div class="cta inline" style="margin-top:14px">
-          <a class="btn primary" href="https://wa.me/385957982203?text=Upit%20za%20Hidroponski%20AI%20(Home%20Grow%20Box)%20-%20saljem%20fotku%20zida%20i%20dimenzije">💬 Pošalji fotku zida</a>
-          <a class="btn" href="tel:0957982203">📞 Nazovi</a>
-        </div>
-
-        <div style="margin-top:10px;opacity:.88;font-size:.95rem">
-          <b>Brzi upit:</b> lokacija + dimenzije (š×v) + što želiš uzgajati.
-        </div>
       </div>
 
-      <div class="card pad">
-        <img src="./img/hidroponika/home-grow-box.jpg"
-             alt="Home Grow Box – hidroponski mini vrt u stanu"
-             loading="lazy"
-             style="border-radius:18px;width:100%;height:auto;display:block;">
-        <div style="margin-top:10px;opacity:.85">
-          <b>Estetski + funkcionalno:</b> diskretna instalacija, uredna obrada i sigurno napajanje.
+      <aside class="card pad rightHero">
+        <div class="imgBox" aria-label="Hero vizual (zamijeni slikom kad imaš)">
+          <!-- PROMIJENI putanju na svoju sliku kad želiš -->
+          <img src="img/hidroponika/home-grow-box.jpg" alt="Home Grow Box u modernom interijeru" onerror="this.style.display='none'; this.parentElement.style.minHeight='260px';" />
+          <div class="imgOverlay">
+            <div>
+              <div class="cap">Home Grow Box</div>
+              <div class="subcap">Mini sustav u stanu, premium dojam</div>
+            </div>
+            <span class="tag">demo vizual</span>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="grid cols3" style="margin-top:16px">
-      <div class="card pad">
-        <h3>Tehnologija</h3>
-        <p>LED rasvjeta prilagođena biljkama, timeri, ventilacija po potrebi, uredno kabliranje i završna obrada.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
-          <span class="pill">LED 3500–6500K</span>
-          <span class="pill">PWM dimming</span>
-          <span class="pill">Timer & scenariji</span>
+        <div class="statGrid">
+          <div class="stat">
+            <div class="k">Tipični rok</div>
+            <div class="v">7–14 dana</div>
+          </div>
+          <div class="stat">
+            <div class="k">Buka</div>
+            <div class="v">tiho*</div>
+          </div>
+          <div class="stat">
+            <div class="k">Modularno</div>
+            <div class="v">da</div>
+          </div>
+          <div class="stat">
+            <div class="k">Održavanje</div>
+            <div class="v">opcionalno</div>
+          </div>
         </div>
-      </div>
-      <div class="card pad">
-        <h3>Automatizacija</h3>
-        <p>Pumpe, protok, doziranje (po modelu), rasporedi zalijevanja i podsjetnici — sve podešeno za “bez brige”.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
-          <span class="pill">Pumpe</span>
-          <span class="pill">Protok</span>
-          <span class="pill">Alarmi</span>
-        </div>
-      </div>
-      <div class="card pad">
-        <h3>AI nadzor</h3>
-        <p>Opcionalno: praćenje trendova i upozorenja (npr. previsoka vlaga, temperature, nepravilni ciklusi).</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
-          <span class="pill">Upozorenja</span>
-          <span class="pill">Trendovi</span>
-          <span class="pill">Optimizacija</span>
-        </div>
-      </div>
-    </div>
 
-    <div class="card pad" style="margin-top:16px">
-      <h3>Kako ide proces</h3>
-      <div class="grid cols3" style="gap:12px;margin-top:12px">
-        <div class="card" style="padding:12px">
-          <b>1) Procjena</b>
-          <div style="opacity:.9;margin-top:6px">Fotka zida + dimenzije + lokacija. Savjetujemo model i poziciju.</div>
+        <div class="mini">
+          * Dizajniramo ventilaciju i protok zraka tako da bude diskretan za dnevni boravak / spavaću sobu.
+          Ako želiš “super tiho”, biramo komponente prema prostoru.
         </div>
-        <div class="card" style="padding:12px">
-          <b>2) Ugradnja</b>
-          <div style="opacity:.9;margin-top:6px">Montaža, zaštita prostora, uredno provlačenje i završna obrada.</div>
-        </div>
-        <div class="card" style="padding:12px">
-          <b>3) Podešavanje</b>
-          <div style="opacity:.9;margin-top:6px">Rasvjeta, ciklusi, zalijevanje + upute za korištenje.</div>
-        </div>
-      </div>
-    </div>
 
-    <div class="grid cols3" style="margin-top:16px">
-      <div class="card pad">
-        <h3>Paketi</h3>
-        <p style="opacity:.9">Za brzo odlučivanje. Točnu cijenu dajemo nakon fotke i mjera.</p>
-      </div>
-      <div class="card pad">
-        <h3>Basic</h3>
-        <p><b>Ugradnja + osnovno podešavanje</b><br/><span style="opacity:.9">LED + timer, pumpa, upute</span></p>
-      </div>
-      <div class="card pad">
-        <h3>Pro</h3>
-        <p><b>Automatizacija + servis</b><br/><span style="opacity:.9">senzori (opcija), alarmi, 1 servis</span></p>
-      </div>
-    </div>
+        <div class="ctaLine">
+          <a class="btn small primary" href="#kontakt">Pošalji fotku prostora</a>
+          <a class="btn small" href="#proces">Kako radimo</a>
+        </div>
+      </aside>
+    </section>
 
-    <div class="card pad" style="margin-top:16px">
-      <h3>FAQ</h3>
-      <div class="grid cols2" style="gap:14px">
+    <!-- USLUGE -->
+    <section class="section" id="usluge">
+      <div class="secTitle">
         <div>
-          <b>Je li to “prljavo” kao zemlja?</b>
-          <div style="opacity:.9;margin-top:6px">Ne. Hidroponika je bez zemlje — uredno, bez nereda.</div>
-        </div>
-        <div>
-          <b>Što trebam poslati za ponudu?</b>
-          <div style="opacity:.9;margin-top:6px">Fotku zida + dimenzije (š×v) + što želiš uzgajati.</div>
-        </div>
-        <div>
-          <b>Koliko traje ugradnja?</b>
-          <div style="opacity:.9;margin-top:6px">Najčešće 2–6 sati, ovisno o pripremi i modelu.</div>
-        </div>
-        <div>
-          <b>Radite li održavanje?</b>
-          <div style="opacity:.9;margin-top:6px">Da — mjesečno/kvartalno ili po pozivu.</div>
+          <h2>Usluge</h2>
+          <p>Fokus na mikro-sustave koji izgledaju premium i rade pouzdano — bez improvizacije.</p>
         </div>
       </div>
-    </div>
 
-    <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"FAQPage",
-      "mainEntity":[
-        {"@type":"Question","name":"Je li hidroponika prljava kao zemlja?","acceptedAnswer":{"@type":"Answer","text":"Ne. Hidroponika je bez zemlje — uredno i bez nereda."}},
-        {"@type":"Question","name":"Što trebam poslati za ponudu?","acceptedAnswer":{"@type":"Answer","text":"Fotku zida + dimenzije (š×v) i što želiš uzgajati."}},
-        {"@type":"Question","name":"Koliko traje ugradnja?","acceptedAnswer":{"@type":"Answer","text":"Najčešće 2–6 sati, ovisno o pripremi i modelu."}},
-        {"@type":"Question","name":"Radite li održavanje?","acceptedAnswer":{"@type":"Answer","text":"Da — mjesečno/kvartalno ili po pozivu."}}
-      ]
-    }
-    </script>
-
-  </div>
-</section>
-
-
-<section class="section reveal">
-  <div class="container">
-    <div class="card pad">
-      <div class="grid cols2">
-        <div>
-          <h2>Nova usluga: Hidroponski AI sustavi</h2>
-          <p>Moderni zidni mini-vrtovi i Home Grow Box rješenja za stan i ured — bez zemlje, čisto i estetski.</p>
-          <a class="btn primary" href="./hidroponski-ai-sustavi.html">🔎 Pogledaj detalje</a>
+      <div class="grid3">
+        <div class="card pad service">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M12 22s7-4 7-11a7 7 0 10-14 0c0 7 7 11 7 11z" stroke="rgba(233,238,255,.9)" stroke-width="1.8"/>
+              <path d="M12 8c2.2 1.4 3.2 3.3 3 5.7-2.4.2-4.3-.8-5.7-3 .2-2.4 1.1-4.3 2.7-5.7z" stroke="rgba(41,211,162,.95)" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Home Grow Box</h3>
+          <p>Kompaktan uzgojni sustav za stan: svjetlo + voda + protok zraka, sve u “čistoj” izvedbi.</p>
+          <div class="tags">
+            <span class="tag">začinsko bilje</span>
+            <span class="tag">salata</span>
+            <span class="tag">jagode</span>
+            <span class="tag">dekorativne biljke</span>
+          </div>
         </div>
-        <div style="opacity:.9">
+
+        <div class="card pad service">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M4 20V4h16v16H4z" stroke="rgba(233,238,255,.9)" stroke-width="1.8"/>
+              <path d="M7 17c2-2 3-3 5-3s3 1 5 3" stroke="rgba(124,92,255,.95)" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M8 9h8M8 12h6" stroke="rgba(233,238,255,.8)" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Vertikalni vrt (zeleni zid)</h3>
+          <p>Modularni zeleni zid u interijeru — estetski “wow” efekt uz realno održavanje.</p>
+          <div class="tags">
+            <span class="tag">dnevni boravak</span>
+            <span class="tag">hodnik</span>
+            <span class="tag">ured</span>
+            <span class="tag">hotel / lokal</span>
+          </div>
+        </div>
+
+        <div class="card pad service">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M9 18h6" stroke="rgba(233,238,255,.9)" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M10 22h4" stroke="rgba(233,238,255,.9)" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M12 2a7 7 0 00-4 13c.7.6 1 1.2 1 2h6c0-.8.3-1.4 1-2A7 7 0 0012 2z" stroke="rgba(255,204,102,.95)" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M8.6 10.5h6.8" stroke="rgba(41,211,162,.95)" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Smart Interior</h3>
+          <p>Knauf + LED integracija, skrivena rasvjeta, tiha ventilacija, pametni prekidači — sve uredno i precizno.</p>
+          <div class="tags">
+            <span class="tag">knauf + LED</span>
+            <span class="tag">tiha ventilacija</span>
+            <span class="tag">smart prekidači</span>
+            <span class="tag">mikro instalacije</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZAŠTO MI -->
+    <section class="section" id="zasto">
+      <div class="secTitle">
+        <div>
+          <h2>Zašto SmartLabs?</h2>
+          <p>Ovo nije “još jedna adaptacija”. Ovo je premium mikro-sustav koji mora izgledati i raditi savršeno.</p>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="card pad">
+          <div class="callout">
+            <b>Razlika je u detaljima:</b> kablovi skriveni, završne lajsne čiste, sve “sjedne” u interijer kao da je tvornički.
+          </div>
           <ul class="list">
-            <li>✔ LED rasvjeta + timer</li>
-            <li>✔ Automatizirano zalijevanje</li>
-            <li>✔ Servis i održavanje</li>
+            <li class="li">
+              <span class="tick" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div><b style="color:rgba(255,255,255,.9)">Projektiranje prije izvedbe:</b> prvo plan, onda rad — bez “naknadno ćemo”.</div>
+            </li>
+            <li class="li">
+              <span class="tick" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div><b style="color:rgba(255,255,255,.9)">Tihi sustavi:</b> biramo komponente za stan (ne “industrija u dnevnom”).</div>
+            </li>
+            <li class="li">
+              <span class="tick" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div><b style="color:rgba(255,255,255,.9)">Modularno i nadogradivo:</b> možeš krenuti malim sustavom i rasti dalje.</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card pad">
+          <h3 style="margin:0 0 8px">Kome je ovo idealno?</h3>
+          <p>Za ljude koji žele “wow” element u prostoru — ali bez kompliciranja i bez nereda.</p>
+
+          <div class="grid2" style="margin-top:12px">
+            <div class="showcase">
+              <h3>Stan / kuća</h3>
+              <p>Bilje, salata, jagode — uz dizajn koji izgleda premium.</p>
+              <div class="tags">
+                <span class="tag">dnevni boravak</span>
+                <span class="tag">kuhinja</span>
+                <span class="tag">spavaća</span>
+              </div>
+            </div>
+            <div class="showcase">
+              <h3>Ured / lokal</h3>
+              <p>Zeleni zid kao “signature” detalj + pametna rasvjeta.</p>
+              <div class="tags">
+                <span class="tag">recepcija</span>
+                <span class="tag">showroom</span>
+                <span class="tag">kafić</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="notice" style="margin-top:12px">
+            <b>Bitno:</b> Radimo samo izvedbe koje možemo napraviti uredno i vrhunski. Ne “nabacujemo” rješenja.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCES -->
+    <section class="section" id="proces">
+      <div class="secTitle">
+        <div>
+          <h2>Proces (AI + izvedba)</h2>
+          <p>Jednostavno: ti pošalješ fotke, mi složimo koncept i izvedemo bez stresa.</p>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="card pad">
+          <div class="steps">
+            <div class="step">
+              <div class="num">1</div>
+              <div>
+                <h4>Pošalji fotke prostora</h4>
+                <p>1–3 fotke + približne dimenzije zida / kuta gdje želiš sustav.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">2</div>
+              <div>
+                <h4>Koncept i izgled</h4>
+                <p>Predložimo layout, pozicije rasvjete, ventilacije i pristup servisu.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">3</div>
+              <div>
+                <h4>Tehnički plan + cijena</h4>
+                <p>Jasna specifikacija i ponuda — bez skrivenih stavki.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">4</div>
+              <div>
+                <h4>Izrada i ugradnja</h4>
+                <p>Čista izvedba, završna obrada i testiranje sustava.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">5</div>
+              <div>
+                <h4>Održavanje (po želji)</h4>
+                <p>Provjere, zamjene potrošnog, fino podešavanje svjetla i navodnjavanja.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card pad">
+          <h3 style="margin:0 0 8px">Što znači “AI” kod nas?</h3>
+          <p>
+            AI koristimo kao alat za brži koncept i bolju organizaciju: predložimo optimalnu poziciju, raspored komponenti,
+            logiku upravljanja i “clean look” izvedbu — tako da sustav izgleda kao dio interijera, a ne kao improvizacija.
+          </p>
+
+          <ul class="list" style="margin-top:12px">
+            <li class="li">
+              <span class="tick" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div><b style="color:rgba(255,255,255,.9)">Plan kabela i skrivenih kanala</b> (da sve ostane uredno).</div>
+            </li>
+            <li class="li">
+              <span class="tick" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div><b style="color:rgba(255,255,255,.9)">Spektar i raspored LED rasvjete</b> prema vrsti biljaka.</div>
+            </li>
+            <li class="li">
+              <span class="tick" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div><b style="color:rgba(255,255,255,.9)">Tiha ventilacija</b> — izbor komponenti i “anti-buka” izvedba.</div>
+            </li>
+            <li class="li">
+              <span class="tick" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div><b style="color:rgba(255,255,255,.9)">Jednostavno upravljanje</b> (timeri / pametni prekidači / scene).</div>
+            </li>
+          </ul>
+
+          <div class="notice" style="margin-top:12px">
+            <b>Poanta:</b> AI ubrza koncept, ali izvedba je 100% “majstorski” — precizno i čisto.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEHNOLOGIJA -->
+    <section class="section" id="tehnologija">
+      <div class="secTitle">
+        <div>
+          <h2>Tehnologije i inovacije</h2>
+          <p>Komponente biramo prema prostoru (stan), estetici (premium) i pouzdanosti (bez čestih kvarova).</p>
+        </div>
+      </div>
+
+      <div class="grid4">
+        <div class="card pad">
+          <h3 style="margin:0 0 6px">LED full-spectrum</h3>
+          <p>Rasvjeta prilagođena biljkama, ali i ugodna oku u interijeru.</p>
+          <div class="tags">
+            <span class="tag">dimming</span>
+            <span class="tag">scene</span>
+            <span class="tag">tajmeri</span>
+          </div>
+        </div>
+
+        <div class="card pad">
+          <h3 style="margin:0 0 6px">Tiha ventilacija</h3>
+          <p>Diskretni protok zraka s naglaskom na nisku buku.</p>
+          <div class="tags">
+            <span class="tag">low-noise</span>
+            <span class="tag">filteri</span>
+            <span class="tag">protok</span>
+          </div>
+        </div>
+
+        <div class="card pad">
+          <h3 style="margin:0 0 6px">Auto navodnjavanje</h3>
+          <p>Pumpa + spremnik + sigurnosna logika (bez curenja i stresa).</p>
+          <div class="tags">
+            <span class="tag">doziranje</span>
+            <span class="tag">servisni pristup</span>
+            <span class="tag">sigurnost</span>
+          </div>
+        </div>
+
+        <div class="card pad">
+          <h3 style="margin:0 0 6px">Smart kontrola</h3>
+          <p>Jednostavno upravljanje: prekidači, scene, timeri, automatika.</p>
+          <div class="tags">
+            <span class="tag">smart switch</span>
+            <span class="tag">rutine</span>
+            <span class="tag">automatika</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card pad" style="margin-top:12px">
+        <div class="grid2">
+          <div>
+            <h3 style="margin:0 0 8px">Premium dojam = završna obrada</h3>
+            <p>
+              Najveći “wow” efekt nije samo u biljkama — nego u tome kako je sve izvedeno:
+              linije ravne, spojevi čisti, kabeli skriveni, rasvjeta “sjeda” u knauf i izgleda kao dio arhitekture.
+            </p>
+            <div class="notice" style="margin-top:12px">
+              <b>Tip:</b> Ako želiš top dojam, najbolje prolazi “minimalistička” kutija + topla ambijentalna rasvjeta uz full-spectrum za biljke.
+            </div>
+          </div>
+
+          <div class="imgBox" aria-label="Tehnologija vizual (zamijeni slikom kad imaš)">
+            <!-- PROMIJENI na svoju sliku (npr. img/hidroponika/tech.jpg) -->
+            <img src="img/hidroponika/home-grow-box.jpg" alt="Detalj: uredna ugradnja i rasvjeta" onerror="this.style.display='none'; this.parentElement.style.minHeight='260px';" />
+            <div class="imgOverlay">
+              <div>
+                <div class="cap">Clean install</div>
+                <div class="subcap">skriveni kabeli • uredni spojevi</div>
+              </div>
+              <span class="tag">premium look</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIMJERI -->
+    <section class="section" id="primjeri">
+      <div class="secTitle">
+        <div>
+          <h2>Primjeri sustava</h2>
+          <p>Ovo su tipični “paketi” koji imaju smisla u stanovima i modernim prostorima.</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card pad">
+          <h3 style="margin:0 0 6px">Mini Grow Box</h3>
+          <p>Za kuhinju ili dnevni boravak. Diskretan, čist, tiho radi.</p>
+          <ul class="list">
+            <li class="li"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Svjetlo + voda + timer</li>
+            <li class="li"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Idealno za začinsko bilje</li>
+            <li class="li"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Estetski “clean” izgled</li>
+          </ul>
+        </div>
+
+        <div class="card pad">
+          <h3 style="margin:0 0 6px">Vertikalni zid</h3>
+          <p>Zeleni zid kao dizajnerski element — modularno, nadogradivo.</p>
+          <ul class="list">
+            <li class="li"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Moduli + servisni pristup</li>
+            <li class="li"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ambijentalna rasvjeta</li>
+            <li class="li"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>“Wow” efekt u prostoru</li>
+          </ul>
+        </div>
+
+        <div class="card pad">
+          <h3 style="margin:0 0 6px">Smart Light System</h3>
+          <p>Knauf + LED i pametne scene — “skrivena” tehnologija, vidljiv rezultat.</p>
+          <ul class="list">
+            <li class="li"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Scene: rad / večer / noć</li>
+            <li class="li"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Čiste linije u knaufu</li>
+            <li class="li"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Bez “vidljivih kablova”</li>
           </ul>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-</main>
+      <div class="card pad" style="margin-top:12px">
+        <div class="notice">
+          <b>Brzi start:</b> Pošalji fotku + reci što želiš uzgajati (bilje/salata/jagode) i gdje bi box/zid stajao.
+          Mi ti složimo koncept i okvirnu cijenu.
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <img src="./img/logo.svg" alt="BuildLabs Group" style="max-width:360px; width:100%; height:auto; opacity:.95"/>
-        <div style="margin-top:8px">Unutarnji radovi • Keramika • Održavanje zgrada</div>
+    <!-- KONTAKT -->
+    <section class="section" id="kontakt">
+      <div class="secTitle">
+        <div>
+          <h2>Kontakt</h2>
+          <p>Najbrže: pošalji fotku prostora i željeni tip sustava. Odgovaramo s konceptom i cijenom.</p>
+        </div>
       </div>
-      <div>
-        📞 <a href="tel:+385957982203">095 798 2203</a><br/>
-        ✉️ <a href="mailto:info@ggupravljanje.com">info@ggupravljanje.com</a>
-      </div>
-      <div>
-        © <span id="year"></span> BuildLabs Group. Sva prava pridržana.
-      </div>
-    </div>
-  </footer>
 
-  <div class="modal" id="modal" aria-hidden="true">
-    <div class="modal-card">
-      <div class="modal-top">
-        <b id="modalTitle">Pregled</b>
-        <button class="btn modal-close" id="modalClose" type="button">✕</button>
-      </div>
-      <div class="modal-body">
-        <iframe id="modalFrame" title="Galerija" style="width:100%; height:560px; border:0; border-radius:16px; background:transparent"></iframe>
-      </div>
-    </div>
-  </div>
+      <div class="grid2">
+        <div class="card pad">
+          <h3 style="margin:0 0 8px">Zatraži besplatni koncept</h3>
+          <p class="hint">
+            U poruci napiši: <span class="kbd">lokacija</span>, <span class="kbd">dimenzije</span>, <span class="kbd">što uzgajaš</span>, <span class="kbd">slika prostora</span>.
+          </p>
 
-  <script src="./assets/config.js"></script>
-  <script src="./assets/app.js"></script>
+          <!-- jednostavan kontakt (bez backend-a) -->
+          <div class="form" style="margin-top:12px">
+            <div class="row">
+              <div class="field">
+                <label for="name">Ime</label>
+                <input id="name" placeholder="npr. Rene" />
+              </div>
+              <div class="field">
+                <label for="phone">Telefon / WhatsApp</label>
+                <input id="phone" placeholder="npr. 095 000 0000" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="msg">Poruka</label>
+              <textarea id="msg" placeholder="npr. Želim Home Grow Box u kuhinji, zid 120cm, uzgoj: začinsko bilje + salata."></textarea>
+            </div>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap">
+              <button class="btn primary" type="button" onclick="copyMessage()">Kopiraj poruku</button>
+              <a class="btn" id="waLink" href="#" target="_blank" rel="noreferrer">Otvori WhatsApp</a>
+            </div>
+
+            <div class="mini">
+              Tip: klikni “Kopiraj poruku” i zalijepi u WhatsApp. Ako želiš, u WhatsApp samo priloži fotku prostora.
+            </div>
+          </div>
+        </div>
+
+        <div class="card pad">
+          <h3 style="margin:0 0 8px">Što nam pošalješ (idealno)</h3>
+          <ul class="list">
+            <li class="li"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>1–3 fotke prostora (gdje ide box ili zeleni zid)</li>
+            <li class="li"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Dimenzije zida / niše</li>
+            <li class="li"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Što želiš uzgajati (bilje/salata/jagode)</li>
+            <li class="li"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="rgba(41,211,162,1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Preferiraš li “super tiho” ili “maks rast”</li>
+          </ul>
+
+          <div class="notice" style="margin-top:12px">
+            <b>Napomena:</b> Ovo je početna verzija stranice. Kad krene prodaja, dodamo: galeriju izvedbi, FAQ, cijene paketa i recenzije.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div>© <span id="y"></span> SmartLabs Interior</div>
+        <div class="mini">Izvedba: Smart Interior & Micro Systems • Zagreb (i okolica)</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Postavi godinu
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // WhatsApp broj (PROMIJENI OVDJE)
+    const WHATSAPP_PHONE = "385957982203"; // npr. 38595XXXXXXX (bez + i razmaka)
+    const wa = document.getElementById('waLink');
+
+    function buildText(){
+      const name = (document.getElementById('name').value || "").trim();
+      const phone = (document.getElementById('phone').value || "").trim();
+      const msg = (document.getElementById('msg').value || "").trim();
+
+      const lines = [];
+      lines.push("SmartLabs Interior — upit za koncept");
+      if(name) lines.push("Ime: " + name);
+      if(phone) lines.push("Telefon: " + phone);
+      lines.push("");
+      lines.push(msg || "Želim koncept za Home Grow Box / vertikalni vrt. (Dodajem fotke u WhatsApp.)");
+      lines.push("");
+      lines.push("Lokacija: ");
+      lines.push("Dimenzije zida/niše: ");
+      lines.push("Što uzgajam (bilje/salata/jagode): ");
+      lines.push("Preferencija: super tiho / maks rast");
+      return lines.join("\n");
+    }
+
+    function copyMessage(){
+      const text = buildText();
+      navigator.clipboard.writeText(text).then(()=>{
+        alert("Poruka kopirana ✅\nOtvori WhatsApp i zalijepi poruku + dodaj fotke.");
+      }).catch(()=>{
+        alert("Ne mogu kopirati automatski. Ručno označi i kopiraj iz polja poruke.");
+      });
+      updateWaLink();
+    }
+
+    function updateWaLink(){
+      const text = encodeURIComponent(buildText());
+      wa.href = "https://wa.me/" + WHATSAPP_PHONE + "?text=" + text;
+    }
+
+    // inicijalno
+    updateWaLink();
+
+    // update link kad korisnik tipka
+    ["name","phone","msg"].forEach(id=>{
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.addEventListener("input", updateWaLink);
+    });
+  </script>
 </body>
 </html>
