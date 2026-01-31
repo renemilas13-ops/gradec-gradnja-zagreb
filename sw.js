@@ -1,4 +1,4 @@
-const CACHE = "gg-cache-force-20260131_150212";
+const CACHE = "gg-cache-cbc-20260131_150537";
 const ASSETS = [
   "./",
   "./index.html",
