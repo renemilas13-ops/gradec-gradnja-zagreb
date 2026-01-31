@@ -1,4 +1,4 @@
-const CACHE = "gg-cache-hydro-ultra-20260131_115610";
+const CACHE = "gg-cache-20260131_143244";
 const ASSETS = [
   "./",
   "./index.html",
