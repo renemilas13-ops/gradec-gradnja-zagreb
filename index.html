@@ -1013,5 +1013,78 @@ html{scroll-behavior:smooth} body{-webkit-font-smoothing:antialiased;-moz-osx-fo
     })();
 
 </script>
+
+<!-- HERO ROTATOR -->
+<script>
+(() => {
+  const images = [
+    "img/hero/hero-01.jpg",
+    "img/hero/hero-02.jpg",
+    "img/hero/hero-03.jpg",
+    "img/hero/hero-04.jpg",
+    "img/hero/hero-05.jpg",
+    "img/hero/hero-06.jpg",
+    "img/hero/hero-07.jpg",
+    "img/hero/hero-08.jpg",
+    "img/hero/hero-09.jpg",
+    "img/hero/hero-10.jpg"
+  ];
+
+  // preload
+  images.forEach(s => { const im = new Image(); im.src = s; });
+
+  // nađi sliku u hero (ako postoji), inače napravi background layer
+  const hero = document.querySelector("#forceHero") || document.querySelector(".hero") || document.body;
+  let img = document.getElementById("forceHeroImg");
+  if (!img) {
+    // fallback: background layer
+    let bg = hero.querySelector(".hero-bg");
+    if (!bg) {
+      bg = document.createElement("div");
+      bg.className = "hero-bg";
+      hero.prepend(bg);
+    }
+    let i = 0;
+    const swap = () => {
+      bg.style.opacity = 0;
+      setTimeout(() => {
+        bg.style.backgroundImage = `url('${images[i]}?v=${Date.now()}')`;
+        bg.style.opacity = 1;
+        i = (i + 1) % images.length;
+      }, 240);
+    };
+    swap();
+    setInterval(swap, 4500);
+    return;
+  }
+
+  // ako imamo <img>, rotiraj src
+  let i = 0;
+  const swapImg = () => {
+    img.style.opacity = 0;
+    setTimeout(() => {
+      img.src = images[i] + "?v=" + Date.now();
+      img.style.opacity = 1;
+      i = (i + 1) % images.length;
+    }, 240);
+  };
+  img.style.transition = "opacity .6s ease";
+  swapImg();
+  setInterval(swapImg, 4500);
+})();
+</script>
+
+<style>
+.hero{position:relative;overflow:hidden}
+.hero-bg{
+  position:absolute;inset:0;
+  background-size:cover;
+  background-position:center;
+  transition:opacity .6s ease;
+  z-index:0;
+}
+.hero>*{position:relative;z-index:1}
+</style>
+
 </body>
 </html>
